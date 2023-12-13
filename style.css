@@ -1,0 +1,325 @@
+:root {
+    --main-color: #f0f0f0;
+    --green-color: #198754;
+}
+
+
+
+.navbar {
+    background-color: rgb(8, 8, 8);
+}
+
+.laindingimg {
+    width: 300px;
+    height: 300px;
+    transform: translateY(0);
+    border: 3px solid white;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;    
+    animation: up-down 2s ease-in-out infinite alternate;
+}
+
+@keyframes up-down {
+    to {
+    border-radius: 40% 40% 70% 50%/60% 30% 70% 40%;
+    }
+}
+
+.navbar .nav-link {
+    color: white;
+    text-transform: capitalize;
+    transition: .3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--green-color);
+}
+
+.navbar .nav-link.activee {
+    color: var(--green-color);
+}
+
+
+.navbar .navbar-toggler {
+    color: var(--green-color);
+    font: 25px;
+    border-color: var(--green-color);
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+.landing {
+    background-color: black;
+
+}
+
+
+.stack h3{
+    border-right: 2px solid white;
+    width: 150px;
+}
+
+.services {
+    background-color: var(--green-color);
+}
+
+button {
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: var(--green-color);
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  }
+  
+  .servbtn::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%,  var(--green-color) 50%,  var(--green-color) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+  .servbtn:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  .servbtn:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+
+.contact {
+    background-color: var(--green-color);
+}
+
+
+
+.inputs form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 53px;
+}
+
+.group {
+    position: relative;
+   }
+   
+   .input {
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 80%;
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+    margin-bottom: 20px;
+   }
+   
+   .input:focus {
+    outline: none;
+    border-bottom: none;
+   }
+   
+   label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+   
+   .input:focus ~ label, .input:valid ~ label {
+    top: -20px;
+    font-size: 14px;
+    color: white;
+   }
+   
+   .bar {
+    position: relative;
+    display: block;
+    width: 200px;
+   }
+   
+   .bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: white;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+   }
+   
+   .bar:before {
+    left: 50%;
+   }
+   
+   .bar:after {
+    right: 50%;
+   }
+   
+   .input:focus ~ .bar:before, .input:focus ~ .bar:after {
+    width: 50%;
+   }
+   
+   .highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0;
+    pointer-events: none;
+    opacity: 0.5;
+   }
+   
+   .input:focus ~ .highlight {
+    animation: inputHighlighter 0.3s ease;
+   }
+   
+   @keyframes inputHighlighter {
+    from {
+     background: #5264AE;
+    }
+   
+    to {
+     width: 0;
+     background: transparent;
+    }
+   }
+
+footer {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 300px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+    background: #f0f0f0;
+    border-radius: 15px;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
+    margin-bottom: 22px;
+
+}
+
+.face {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.face.back {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.face.back b {
+    margin: 0;
+    padding: 0;
+}
+
+.face.front {
+    transition: 0.5s;
+}
+.face.front b {
+    margin: 0;
+    padding: 0;
+    font-size: 4.1em;
+    color: #f0f0f0;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.card:hover .face.front {
+    height: 60px;
+}
+
+.card:hover .face.front b {
+    font-size: 2em;
+}
+
+.face.front {
+    background-color: black;
+    border-radius: 15px;
+}
+
+
+
+
+@media (max-width: 1023px) {
+    .icons {
+        margin-left: 142px;
+    }
+    .laindingimg {
+        margin-left: 51px;
+        margin-bottom: 20px;
+    }
+    #card1 {
+        margin-left: 59px;
+    }
+    footer p {
+        margin-left: 57px
+    }
+    footer ul a {
+        display: none;
+    }
+}
